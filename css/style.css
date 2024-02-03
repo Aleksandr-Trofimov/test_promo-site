@@ -1,0 +1,85 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+.container {
+	max-width: 1110px;
+	margin: 0 auto;
+}
+:root {
+	--accept-color: #34547a;
+	--silver-color: #eeeff1;
+}
+
+/* Стили для текстов  */
+
+.text-h2 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-size: 32px;
+}
+.text-h3 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-size: 21px;
+}
+.text-p {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+/* Меню навигации */
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 65px;
+	margin-bottom: 112px;
+}
+.navigation__logo {
+	margin-top: 2px;
+	margin-left: 2px;
+}
+.navigation__menu {
+	display: flex;
+	justify-content: space-between;
+	gap: 42px;
+	margin-right: 10px;
+}
+.navigation__menu-item {
+	color: #000;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* Header__second-screen */
