@@ -134,7 +134,7 @@ body {
 	margin-left: 1px;
 }
 
-/* Добавляем адаптив под маленькие экраны блока header */
+/* Адаптив под маленькие экраны блока header */
 
 @media screen and (max-width: 1280px) {
 	.header {
@@ -162,7 +162,7 @@ body {
 
 .about {
 	padding-top: 119px;
-	padding-bottom: 100px;
+	padding-bottom: 92px;
 	max-width: 540px;
 	text-align: center;
 	margin: 0 auto;
@@ -176,4 +176,74 @@ body {
 	max-width: 540px;
 	margin: 0 auto;
 	text-align: center;
+}
+
+/* Адаптив под маленькие экраны блока about */
+
+@media screen and (max-width: 768px) {
+	.about {
+		padding: 100px 15px;
+	}
+}
+
+/* Block numbers */
+
+.numbers {
+	background-color: var(--accept-color);
+	padding-top: 100px;
+	padding-bottom: 91px;
+}
+.numbers__grid-container-projects {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 30px;
+}
+.numbers__grid-container-projects-item {
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 5px;
+	grid-template-areas:
+		"image project-number"
+		"image project-description";
+}
+.numbers__grid-container-projects-item__img {
+	grid-area: image;
+}
+.numbers__grid-container-projects-item__project-number {
+	grid-area: project-number;
+	font-size: 21px;
+	color: #fff;
+	margin-top: 2px;
+}
+.numbers__grid-container-projects-item__project-description {
+	grid-area: project-description;
+	color: #fff;
+	font-size: 16px;
+}
+
+/* Адаптив под маленькие экраны блока numbers */
+
+@media screen and (max-width: 1280px) {
+	.numbers {
+		padding: 0 15px;
+	}
+	.numbers__grid-container-projects {
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.numbers__grid-container-projects {
+		grid-template-columns: repeat(2, 150px);
+		justify-content: space-evenly;
+	}
+}
+@media screen and (max-width: 349px) {
+	.numbers__grid-container-projects {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
