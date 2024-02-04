@@ -34,6 +34,7 @@ body {
 	--accept-color: #34547a;
 	--silver-color: #eeeff1;
 	--description-color: #727272;
+	--progress-bar-color: #c4c4c4;
 }
 
 /* Стили для текстов  */
@@ -245,5 +246,82 @@ body {
 @media screen and (max-width: 349px) {
 	.numbers__grid-container-projects {
 		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+/* Block skills */
+
+.skills {
+	padding: 102px 0 101px 2px;
+}
+.container__skills {
+	max-width: 1150px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 150px;
+}
+.skills__left-side {
+	height: 450px;
+}
+.skills__title {
+	padding-top: 102px;
+	margin-bottom: 42px;
+}
+.skills__description-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.skills__description-container-item {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.skills__description {
+	padding-left: 1px;
+	margin-bottom: 4px;
+	color: var(--description-color);
+}
+.skills__progress-bar {
+	display: flex;
+	width: 445px;
+	height: 4px;
+	background-color: var(--progress-bar-color);
+}
+.skills__progress-bar-completed {
+	background-color: var(--accept-color);
+	width: 350px;
+}
+.skills__progress-bar-remaining {
+	width: 95px;
+	background-color: red;
+}
+.skills__right-side {
+	max-width: 555px;
+}
+
+/* Адаптив под маленькие экраны блока skills */
+
+@media screen and (max-width: 1280px) {
+	.skills {
+		padding: 100px 15px;
+	}
+	.container__skills {
+		flex-wrap: wrap;
+		gap: 100px;
+	}
+	.skills__left-side {
+		height: auto;
+	}
+}
+@media screen and (max-width: 768px) {
+	.skills {
+		padding: 50px 15px;
+	}
+	.skills__title {
+		padding-top: 42px;
+		margin-bottom: 42px;
 	}
 }
