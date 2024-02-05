@@ -315,6 +315,9 @@ body {
 	.skills__left-side {
 		height: auto;
 	}
+	.skills__right-side {
+		width: 100%;
+	}
 }
 @media screen and (max-width: 768px) {
 	.skills {
@@ -349,4 +352,91 @@ video {
 	/* max-width: 1100px; */
 	/* max-height: 600px; */
 	cursor: pointer;
+}
+
+/* Адаптив под маленькие экраны блока video */
+
+@media screen and (max-width: 1280px) {
+	.video {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+/* Block projects */
+
+.projects {
+	padding-top: 28px;
+}
+.projects__grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+}
+.projects___grid_item {
+}
+.card_1,
+.card_2 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	width: 480px;
+	height: 480px;
+}
+.card_1 {
+	background-image: url(../images/Projects_photo_1.jpg);
+}
+.card_2 {
+	background-image: url(../images/Projects_photo_2.jpg);
+}
+.projects_img {
+	z-index: 2;
+	opacity: 0;
+	transition: 0.5s ease;
+}
+.card-filter {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #34547a;
+	z-index: 1;
+	opacity: 0;
+	transition: 0.5s ease;
+}
+.card_1:hover .projects_img,
+.card_2:hover .projects_img {
+	opacity: 1;
+}
+.card_1:hover .card-filter,
+.card_2:hover .card-filter {
+	opacity: 0.8;
+}
+
+/* Адаптив под маленькие экраны блока projects */
+
+@media screen and (max-width: 1280px) {
+	.projects {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.projects__grid-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media screen and (max-width: 768px) {
+	.projects__grid-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media screen and (max-width: 479px) {
+	.card_1,
+	.card_2 {
+		max-width: 480px;
+		height: 480px;
+		padding-right: 15px;
+	}
 }
