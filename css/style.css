@@ -436,7 +436,22 @@ video {
 	.card_1,
 	.card_2 {
 		max-width: 480px;
-		height: 480px;
-		padding-right: 15px;
+		max-height: 480px;
 	}
+}
+
+/* Block clients */
+
+.clients {
+	padding-top: 72px;
+	padding-bottom: 100px;
+}
+.clients__flex-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+}
+.clients__flex-items {
+	min-width: 255px;
 }
